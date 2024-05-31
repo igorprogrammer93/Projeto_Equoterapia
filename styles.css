@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    height: 120px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    background-size:auto;
+    height: 132px;
+    padding-top: 18px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #0b390a;
+}
+.logo{
+    margin-right: 560px;
+    height: 120px;
+}
+
+
+header h1 {
+    margin-bottom: -40px;
+    font-size: 24px;
+    color:#fff;
+}
+
+header p {
+    margin-top: -60px;
+    font-size: 14px;
+    color:#fff;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form h2, form h3 {
+    width: 100%;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.form-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-section label {
+    width: 30%;
+    font-weight: bold;
+}
+
+.form-section input, .form-section select {
+    width: 65%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-section input[type="date"] {
+    padding: 4px;
+}
+
+@media (max-width: 600px) {
+    .form-section {
+        flex-direction: column;
+    }
+
+    .form-section label, .form-section input, .form-section select {
+        width: 100%;
+    }
+
+    .form-section input, .form-section select {
+        margin-top: 5px;
+    }
+}
