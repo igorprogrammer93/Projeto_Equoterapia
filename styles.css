@@ -84,6 +84,50 @@ form h2, form h3 {
     padding: 4px;
 }
 
+#login-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+#login-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+#login-container input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-container button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#login-container button:hover {
+    background-color: #0056b3;
+}
+
+#error-message {
+    margin-top: 1rem;
+    color: red;
+}
+
 @media (max-width: 600px) {
     .form-section {
         flex-direction: column;
