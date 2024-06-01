@@ -85,6 +85,7 @@ form h2, form h3 {
 }
 
 #login-container {
+    align-items: center;
     background-color: white;
     padding: 2rem;
     border-radius: 10px;
