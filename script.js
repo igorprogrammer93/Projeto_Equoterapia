@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const correctPassword = "1234"; // Change this to your desired password
-    const form = document.querySelector("form");
+    const correctPassword = "yourpassword"; // Change this to your desired password
+
     window.checkPassword = function () {
         const passwordInput = document.getElementById("password").value;
         if (passwordInput === correctPassword) {
@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("error-message").style.display = "block";
         }
     };
+
+    const form = document.querySelector("form");
 
     // Carregar dados do localStorage quando a página é carregada
     loadFormData();
