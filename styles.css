@@ -9,7 +9,6 @@ body {
     margin: 0;
     padding: 20px;
     background-color: white;
-    margin:none;
 }
 
 .container {
@@ -57,7 +56,7 @@ form {
 form h2, form h3 {
     width: 100%;
     font-size: 18px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid white;
     padding-bottom: 5px;
     margin-top: 20px;
     margin-bottom: 10px;
