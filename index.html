@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Login</button>
+        <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
+    </div>
+
+    <div class="container" id="form-container" style="display: none;">
         <header>
             <h1>Centro de Equoterapia Ivo Clemente</h1>
             <img class="logo" src="/images/equoprojetp.png" alt="Descrição da imagem">
