@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (passwordInput === correctPassword) {
             document.getElementById("login-container").style.display = "none";
             document.getElementById("form-container").style.display = "block";
-            loadFormData();
         } else {
             document.getElementById("error-message").style.display = "block";
         }
@@ -14,13 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.querySelector("form");
 
-    // Carregar dados do localStorage quando a página é carregada
-    loadFormData();
+    // Função para salvar os dados no localStorage
+    window.saveFormData = function() {
+        const childName = document.getElementById("child-name").value;
+        if (!childName) {
+            alert("Por favor, insira o nome da criança.");
+            return;
+        }
 
-    // Salvar dados no localStorage sempre que um campo for alterado
-    form.addEventListener("input", saveFormData);
-
-    function saveFormData() {
         const formData = {};
         const elements = form.elements;
         for (let i = 0; i < elements.length; i++) {
@@ -29,11 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 formData[element.name] = element.value;
             }
         }
-        localStorage.setItem("formData", JSON.stringify(formData));
-    }
+        localStorage.setItem(`formData-${childName}`, JSON.stringify(formData));
+        alert("Dados salvos com sucesso!");
+    };
 
-    function loadFormData() {
-        const savedData = localStorage.getItem("formData");
+    // Função para carregar os dados do localStorage
+    window.loadFormData = function() {
+        const childName = document.getElementById("child-name").value;
+        if (!childName) {
+            alert("Por favor, insira o nome da criança.");
+            return;
+        }
+
+        const savedData = localStorage.getItem(`formData-${childName}`);
         if (savedData) {
             const formData = JSON.parse(savedData);
             const elements = form.elements;
@@ -43,7 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     element.value = formData[element.name];
                 }
             }
+            alert("Dados carregados com sucesso!");
+        } else {
+            alert("Nenhum dado encontrado para esta criança.");
         }
-    }
+    };
 });
 
